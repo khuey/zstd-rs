@@ -38,6 +38,6 @@ jobs:
       with:
         submodules: recursive
     - name: Build
-      run: cargo build --verbose
+      run: cargo build --verbose --target ${{ matrix.target }}
     - name: Run tests
-      run: cargo test --verbose
+      run: cargo test --verbose --target ${{ matrix.target }}
